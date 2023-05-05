@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  nexus-repo:
+    image: sonatype/nexus3
+    container_name: NexusRepo
+    restart: unless-stopped
+    ports:
+       - "8081:8081"
+       - "8085:8085"
+    volumes:
+            - nexus-data:/nexus-data
+
+  nexus-proxy:
+    image: nginx:latest
+    container_name: NexusNginxProxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+            - ./proxy-registry.co.conf:/etc/nginx/conf.d/proxy-registry.co.conf
+            - ./proxy-apt.co.conf:/etc/nginx/conf.d/proxy-apt.co.conf
+
+volumes:
+  nexus-data:
+
