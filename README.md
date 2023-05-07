@@ -1,3 +1,4 @@
+![image info](./src/devops-log.png)
 # Welcome to  DevOps-experience!
 
 **some personal DevOps-experience**
