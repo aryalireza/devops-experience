@@ -46,6 +46,7 @@ For me docker proxy is really usefull, because of Nexus mechanism of caching ima
 ### Docker Tweaks
 -   Log rotation:
     -   Put [this_file](./docker-tweak/docker_log_rotaion) in "/etc/logrotate.d/`docker_log_rotation`"
+    > log rotation value settings are just some defult for me, you can customize it for yourself.
     -   For force run logrotate, use => `logrotate -f /etc/logrotate.d/docker_log_rotation`
 -   Docker Change IP range:
     -   For change ip range of your container, put [daemon.json](./docker-tweak/daemon.json) in `/etc/docker/`
