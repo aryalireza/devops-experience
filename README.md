@@ -32,6 +32,11 @@ now edit apt address lines in the ``/etc/apt/sources.list`` file to ``http://pro
 and for test just run ``apt update``.
 Now all your Debian OSs that sets sources.list to specific address can download packages and they will be cached into the Nexus data store for the next time.
 
+##### Container Registry for Docker
+Also u can create a docker registry for yourself(Private or Proxy).
+For me docker proxy is really usefull, because of Nexus mechanism of caching images layers. every time u pull images, it will be cached in nexus data store for the next time, it really saved my time and internet bandwidth
+---
+
 
 ### Zabbix API Wrapper
 > Under Working!
