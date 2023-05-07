@@ -1,0 +1,9 @@
+/var/lib/docker/containers/*/*.log {
+    rotate 2
+    copytruncate
+    missingok
+    notifempty
+    compress
+    maxsize 500M
+    daily
+}
